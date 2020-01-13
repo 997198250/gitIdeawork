@@ -6,6 +6,8 @@ import com.fh.entity.vo.SearchUtil;
 import com.fh.service.StudentService;
 import com.fh.util.FileUtilesalbb;
 import com.fh.util.ResponseData;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +21,8 @@ import java.io.IOException;
 @RequestMapping("student")
 @CrossOrigin
 public class StudentController {
+
+    private final static Logger LOGGER = LoggerFactory.getLogger(StudentController.class);
 
     @Autowired
     private StudentService studentService;
