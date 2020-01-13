@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fh.common.Excel;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
@@ -12,11 +13,14 @@ public class Student {
     @TableId(value = "id",type = IdType.AUTO)
     private Integer id;
     @TableField
+    @Excel(name="学生姓名",value = "name")
     private String name;
     @TableField
+    @Excel(name="学生年龄",value = "age")
     private Integer age;
     @TableField
     @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @Excel(name="学生生日",value = "birthday")
     private Date  birthday;
     @TableField
     private String address;

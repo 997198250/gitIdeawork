@@ -24,7 +24,7 @@ public class StudentController {
     private StudentService studentService;
 
 
-    
+
 
     //服务端分页
     @RequestMapping("queryStudentList")
