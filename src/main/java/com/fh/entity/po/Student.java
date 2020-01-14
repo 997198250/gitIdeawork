@@ -5,24 +5,31 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.fh.common.Excel;
+import com.fh.common.ExcelFild;
+import com.fh.common.ExcleHeard;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 @TableName(value = "ssmp_student")
+@ExcleHeard(title = "学生信息")
 public class Student {
     @TableId(value = "id",type = IdType.AUTO)
     private Integer id;
     @TableField
-    @Excel(name="学生姓名",value = "name")
+    //@Excel(name="学生姓名",value = "name")
+    @ExcelFild(name = "学生姓名")
     private String name;
     @TableField
     @Excel(name="学生年龄",value = "age")
+    @ExcelFild(name = "学生年龄")
     private Integer age;
     @TableField
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Excel(name="学生生日",value = "birthday")
+    @ExcelFild(name = "学生生日")
     private Date  birthday;
     @TableField
+    @ExcelFild(name = "家庭住址")
     private String address;
     @TableField
     private String  imgPath;
